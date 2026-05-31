@@ -15,5 +15,6 @@ echo -e "  ${G}✓${N} macOS / ${ARCH}"
 echo -e "  Downloading AGenIOS..."
 curl -fsSL "$BASE/$BIN" -o /tmp/agenios-setup
 chmod +x /tmp/agenios-setup
+xattr -d com.apple.quarantine /tmp/agenios-setup 2>/dev/null || true
 echo -e "  ${G}✓${N} Ready\n"
 /tmp/agenios-setup
